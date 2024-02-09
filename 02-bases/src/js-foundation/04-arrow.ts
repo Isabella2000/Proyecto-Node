@@ -1,3 +1,5 @@
+// ?Esta hoja solo explica que se puede hacer una funcion con arrow function
+
 const users = [
     {
         "id": 1,
@@ -9,10 +11,8 @@ const users = [
     },
 ]
 
-function getUserById(id, callback) {
+export const getUserById = (id: number, callback: any) => {
     const user = users.find((user) => user.id === id)
     !user && callback(`User not found ${id}`)
     return callback(null, user)
 }
-
-module.exports = { getUserById }

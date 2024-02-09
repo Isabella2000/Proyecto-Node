@@ -1,9 +1,9 @@
-const { http } = require('./http-client.plugin');
-const buildLogger = require('./logger.plugin');
+import { httpClientPlugin as http } from './http-client.plugin';
+import { buildLogger } from './logger.plugin';
 const { v4: uuidv4 } = require('uuid');
 const getAgePlugins = require("get-age")
 
-const getAge = (birthdate) => {
+const getAge = (birthdate: string) => {
     if (!birthdate) return new Error("Tu cumple es requerido")
     return getAgePlugins(birthdate)
 }
@@ -12,6 +12,4 @@ const getUUID = () => {
     return uuidv4()
 }
 
-module.exports = {
-    http, getAge, getUUID, buildLogger
-}
+export { http, getAge, getUUID, buildLogger }

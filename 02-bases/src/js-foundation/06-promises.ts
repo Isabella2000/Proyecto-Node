@@ -1,7 +1,7 @@
-const { http } = require('../plugins/Index');
+import { http } from '../plugins/Index';
 
 
-const getRickById = async (id) => {
+export const getRickById = async (id: number) => {
     const url = `https://rickandmortyapi.com/api/character/${id}`
     const rick = await http.get(url)
     return rick.name
@@ -12,5 +12,3 @@ const getRickById = async (id) => {
     //     .then((resp) => resp.json())
     //     .then((pokemon) => pokemon.name)
 }
-
-module.exports = getRickById

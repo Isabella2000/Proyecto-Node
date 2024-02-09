@@ -1,9 +1,12 @@
 interface Heroe {
     id: number,
     name: string,
+  
     owner: string
 }
 
+//dataBodegas : BodegasAgg[] 
+//Heroe[] ---> Array<Heroe | number>
 export const heroes: Heroe[] = [
     {
         id: 1,
