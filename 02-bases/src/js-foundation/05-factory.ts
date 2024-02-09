@@ -15,6 +15,4 @@ export const makeBuildPerson = (
     }
 }
 //* Para un array se define antes el tipo
-// const hola = ([]: string[]) => {
-
-// }
+// const hola = ([]: string[]) => {}
